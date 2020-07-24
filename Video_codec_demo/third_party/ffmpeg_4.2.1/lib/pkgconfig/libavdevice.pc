@@ -1,0 +1,14 @@
+prefix=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1
+exec_prefix=${prefix}
+libdir=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1/lib
+includedir=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.8.100
+Requires: 
+Requires.private: libavfilter >= 7.57.100, libswscale >= 5.5.100, libavformat >= 58.29.100, libavcodec >= 58.54.100, libswresample >= 3.5.100, libavutil >= 56.31.100
+Conflicts:
+Libs: -L${libdir}  -lavdevice 
+Libs.private: -lm -lxcb -lxcb-shm -lxcb -lxcb-shape -lxcb -lxcb-xfixes -lxcb-render -lxcb-shape -lxcb
+Cflags: -I${includedir}

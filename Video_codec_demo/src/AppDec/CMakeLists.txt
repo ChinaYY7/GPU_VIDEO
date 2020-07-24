@@ -1,0 +1,15 @@
+PROJECT(AppDec)
+MESSAGE(STATUS "<VIDEO_CODEC_DEMO-src-AppDec>")
+
+FILE(GLOB_RECURSE DIR_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+#LIST (REMOVE_ITEM DIR_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/AppDec.cpp")
+LIST (REMOVE_ITEM DIR_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp")
+LIST (REMOVE_ITEM DIR_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/common.cpp")
+LIST (REMOVE_ITEM DIR_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/Decode.cpp")
+LIST (APPEND DIR_SRCS ${Nv_Decoder_path})
+
+SET(exe_name AppDec.bin)
+ADD_EXECUTABLE(${exe_name} ${DIR_SRCS})
+TARGET_LINK_LIBRARIES(${exe_name} nvcuvid pthread cuda cudart avcodec avformat avutil avdevice glog gpujpeg)
+
+

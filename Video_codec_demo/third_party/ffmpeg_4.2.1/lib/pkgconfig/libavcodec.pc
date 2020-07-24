@@ -1,0 +1,14 @@
+prefix=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1
+exec_prefix=${prefix}
+libdir=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1/lib
+includedir=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.54.100
+Requires: 
+Requires.private: libswresample >= 3.5.100, libavutil >= 56.31.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -llzma -lz -ldl
+Cflags: -I${includedir}

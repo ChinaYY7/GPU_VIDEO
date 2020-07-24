@@ -1,0 +1,14 @@
+prefix=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1
+exec_prefix=${prefix}
+libdir=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1/lib
+includedir=/home/yy/Install_source/FFmpeg/ffmpeg_4.2.1/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.31.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -ldl
+Cflags: -I${includedir}

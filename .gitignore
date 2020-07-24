@@ -1,0 +1,7 @@
+# document
+Nvidia_Codec_SDK/
+build/
+!Video_codec_demo/
+# Vscode
+
+.vscode/
